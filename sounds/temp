@@ -1,0 +1,77 @@
+
+  var NumberOFbuttons = document.querySelectorAll(".drum").length;
+  for(var i=0;i<NumberOFbuttons;i++)
+  {
+    document.querySelectorAll(".drum")[i].addEventListener("click",function()
+  {
+    var buttonInnerHTML = this.innerHTML;
+    makesound(buttonInnerHTML);
+
+
+  });
+  }
+  document.addEventListener("keyup", function (ey)
+  {
+      makesoundStop(event.ey);
+  });
+  document.addEventListener("keydown", function (key)
+  {
+      makesound(event.key);
+  });
+
+
+  function makesound(key)
+  {
+    switch(key)
+    {
+      case "w":
+                var tom1 = new Audio("Em ba ba em.mp3");
+                tom1.play();
+                break;
+      case "a":
+                var tom2 = new Audio("do dod do dod.mp3");
+                tom2.play();
+                break;
+      case "s":
+               var tom3 = new Audio("Tu e Ou.mp3");
+               tom3.play();
+               break;
+      case "d":
+               var tom4 = new Audio("i love you baby.mp3");
+               tom4.play();
+               break;
+      case "j":
+               var tom5 = new Audio("Em ba ba em.mp3");
+               tom5.play();
+               break;
+      case "k":
+              var tom6 = new Audio("MAin cat music.mp3");
+              tom6.play();
+              break;
+
+     default : console.log();
+    }
+  }
+  function makesoundStop(ey)
+  {
+    switch(ey)
+    {
+      case "w":
+                tom1.pause();
+                break;
+      case "a":
+                tom2.pause();
+                break;
+      case "s":
+               tom3.pause();
+               break;
+      case "d":
+               tom4.pause();
+               break;
+      case "j":
+               tom5.pause();
+               break;
+
+     default : console.log();
+    }
+  }
